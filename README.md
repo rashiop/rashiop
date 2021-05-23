@@ -1,6 +1,7 @@
 <h1 align="center">Hi There, I am Popsy</h1>
 <h3>Fueled by Matcha Latte</h3>
 
+- ❤ Learn 💻, cat 🐈 and dog 🐕, Coffee, Matcha, Manga
 - 🌱 I’m currently enrolled in **data science** class
 - 🌱 Learning and re-learn
 - 💬 Ask me about **react, node**
