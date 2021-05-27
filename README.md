@@ -1,15 +1,15 @@
 <h1 align="center">Hi There, I am Popsy</h1>
-<h3>Fueled by Matcha Latte</h3>
+<h3>Fueled by Matcha Latte ♨</h3>
 
 
-- ❤ Learn 💻, cat 🐈 and dog 🐕, Coffee, Matcha, Manga
+- ❤ Learn 💻, Cat 🐈, Dog 🐕, Coffee, Matcha, Manga
 - 🌱 I’m currently enrolled in **data science** class
-- 🌱 Learning and re-learn
+- 📚 Learning and re-learn
 - 💬 Ask me about **react, node**
 - 📫 How to reach me **red.alpacca@gmail.com**
 - 📄 Know about my experiences [resume](https://docs.google.com/document/d/e/2PACX-1vSXzZ8j-PoZm3YH-6A2uNt__IGpZhyEL4GlrmYjWFEDUmA__-4f8SIKuWmday1JT-DSwPkGF2FGXlJf/pub)
 - 🐈 Pawrent of 5 chonky cats
-- ⚡ Fun fact **I keep learning everyday to plant trees**
+- 🌲 Fun fact **I keep learning everyday to plant trees** 🌲🌲🌲🌲
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
