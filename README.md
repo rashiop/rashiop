@@ -3,7 +3,7 @@
 
 
 - ❤ Learn 💻, Cat 🐈, Dog 🐕, Coffee, Matcha, Manga
-- 🌱 I’m currently enrolled in **data science** class
+- 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/)
 - 📚 Learning and re-learn
 - 💬 Ask me about **react, node**
 - 📫 How to reach me **red.alpacca@gmail.com**
