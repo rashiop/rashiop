@@ -8,7 +8,7 @@
 - 💬 Ask me about **react, node**
 - 📫 How to reach me **red.alpacca@gmail.com**
 - 📄 Know about my experiences [resume](https://docs.google.com/document/d/e/2PACX-1vSXzZ8j-PoZm3YH-6A2uNt__IGpZhyEL4GlrmYjWFEDUmA__-4f8SIKuWmday1JT-DSwPkGF2FGXlJf/pub)
-- 🐈 Pawrent of 5 chonky cats
+- 🐈 Pawrent of 🐈🐈🐈🐈🐈 cutie cats 
 - 🌲 Fun fact **I keep learning everyday to plant trees** 🌲🌲🌲🌲
 
 <h3 align="left">Connect with me:</h3>
