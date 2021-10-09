@@ -1,6 +1,16 @@
-<h1 align="center">Hi There, I am Popsy</h1>
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        h1 {
+            text-shadow: 0.025em 0.025em 0 yellow, 0.05em 0.05em 0 blue, 0.075em 0.075em 0 red, 0.1em 0.1em 0 black;
+        }
+      </style>
+      <h1>Hi There, I am Popsy</h1>
+    </div>
+  </foreignObject>
+</svg>
 <h3>Fueled by Matcha Latte ♨</h3>
-
 
 - ❤ Learn 💻, Cat 🐈, Dog 🐕, Coffee, Matcha, Manga
 - 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/)
