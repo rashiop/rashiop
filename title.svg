@@ -5,9 +5,15 @@
         h1 {
             color: #c0ffee;
             text-shadow: 0.025em 0.025em 0 yellow, 0.05em 0.05em 0 blue, 0.075em 0.075em 0 red, 0.1em 0.1em 0 black;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+          margin-top: 10px;
         }
       </style>
       <h1>Hi There, I am Popsy</h1>
+      <p>Udra's big sis</p>
     </div>
   </foreignObject>
 </svg>
