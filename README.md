@@ -5,6 +5,7 @@
 <h3>Fueled by coffee ♨</h3>
 
 - ❤ Learn 💻, Cat 🐈, Dog 🐕, Coffee
+- 🐈 Collects [udra's nft](https://opensea.io/collection/udra-calico)
 - 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/)
 - 📚 Learning and re-learn
 - 💬 Ask me about **react, node**
