@@ -6,7 +6,7 @@
 
 - ❤ Learn 💻, Cat 🐈, Dog 🐕, Coffee
 - 🐈 Collects [udra's nft](https://opensea.io/collection/udra-calico)
-- 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/)
+- 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/) and learning flutter
 - 📚 Learning and re-learn
 - 💬 Ask me about **react, flutter**
 - 📫 How to reach me **red.alpacca@gmail.com**
