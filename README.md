@@ -1,5 +1,5 @@
 <div align="center" height="200" width="100%">
-    <img src="title.svg" alt="Hi, I am Popsy">
+    <img src="title.svg" alt="Hi, I am Poppy">
 </div>
 <h2>Your Software Engineer</h2>
 <h3>Fueled by coffee ♨</h3>
@@ -8,7 +8,7 @@
 - 🐈 Collects [udra's nft](https://opensea.io/collection/udra-calico)
 - 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/) and learning flutter
 - 📚 Learning and re-learn
-- 💬 Ask me about **react, flutter**
+- 💬 Ask me about **react**
 - 📫 How to reach me **red.alpacca@gmail.com**
 - 🐈 Pawrent of 5 chonky cats 
 - 🌲 Fun fact **I keep learning everyday to plant trees** 🌲🌲🌲🌲
