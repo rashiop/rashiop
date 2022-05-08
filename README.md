@@ -9,7 +9,6 @@
 - 🌱 I’m currently enrolled in **data science** [class](http://pacmann.ai/) and learning flutter
 - 📚 Learning and re-learn
 - 💬 Ask me about **react**
-- 📫 How to reach me **red.alpacca@gmail.com**
 - 🐈 Pawrent of 5 chonky cats 
 - 🌲 Fun fact **I keep learning everyday to plant trees** 🌲🌲🌲🌲
 
