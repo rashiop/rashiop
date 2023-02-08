@@ -9,7 +9,7 @@
 - 🌱 I’m currently learning three.js
 - 📚 Learning and re-learn
 - 💬 Ask me about **react**
-- 🐈 Pawrent of 5 chonky cats 
+- 🐈 Proud pawrent of furbabies 
 - 🌲 Fun fact **I keep learning everyday to plant trees** 🌲🌲🌲🌲
 
 <h3 align="left">Connect with me:</h3>
