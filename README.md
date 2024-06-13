@@ -4,7 +4,6 @@ You can call me Pops, a tech enthusiast and cat lover
 - 🌱 I’m currently learning embedded system (arduino uno)
 - 📚 Learning and re-learn to plan tree 🌲
 - 💬 Ask me about react, go, and rust
-- MBTI: INTP / ISTP
 
 <h3 align="left">Let's connect!</h3>
 <p align="left">
