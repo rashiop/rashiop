@@ -1,7 +1,7 @@
 Heyy there,<br/>
 You can call me Pops, a tech enthusiast and cat lover
 - ❤ Learn, Cats & Dogs, Coffee
-- 🌱 I’m currently learning embedded system (arduino uno r3/ ESP32/ PIC)
+- 🌱 I’m currently learning embedded system (arduino uno r3/ ESP32/ PIC) and architecting system
 - 📚 Learning and re-learn to plan tree 🌲
 - 💬 Ask me about react, go, and rust
 
