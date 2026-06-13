@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Poppy Puspa Sari — Fullstack Solidity Product Engineer</title>
+<meta name="description" content="Fullstack software engineer with 8+ years in JS/TS/React/Node, now building on-chain: Solidity, Foundry, UUPS upgradeable contracts, DAO governance, and full-stack dApps." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* Brand & accent */
+    --primary: #494fdf;
+    --primary-bright: #4f55f1;
+    --primary-deep: #3a40c4;
+    --on-primary: #ffffff;
+
+    /* Surface */
+    --canvas-light: #ffffff;
+    --canvas-dark: #000000;
+    --surface-soft: #f4f4f4;
+    --surface-card: #ffffff;
+    --surface-deep: #0a0a0a;
+    --surface-elevated: #16181a;
+    --hairline-light: #e2e2e7;
+    --hairline-dark: rgba(255,255,255,0.12);
+    --hairline-strong: #191c1f;
+    --divider-soft: rgba(255,255,255,0.06);
+
+    /* Text */
+    --ink: #191c1f;
+    --body: #1f2226;
+    --charcoal: #3a3d40;
+    --mute: #505a63;
+    --ash: #5c5e60;
+    --stone: #8d969e;
+    --faint: #c9c9cd;
+    --on-dark: #ffffff;
+    --on-dark-mute: rgba(255,255,255,0.72);
+
+    /* Accents (illustration / data only) */
+    --accent-teal: #00a87e;
+    --accent-light-blue: #007bc2;
+    --accent-light-green: #428619;
+    --accent-warning: #ec7e00;
+    --accent-pink: #e61e49;
+    --link: #376cd5;
+
+    /* Radius */
+    --r-sm: 8px;
+    --r-md: 12px;
+    --r-lg: 20px;
+    --r-xl: 28px;
+    --r-full: 9999px;
+
+    /* Type */
+    --display: "General Sans", "Inter", system-ui, sans-serif;
+    --bodyfont: "Inter", system-ui, sans-serif;
+
+    /* Spacing */
+    --s-xs: 6px;
+    --s-sm: 8px;
+    --s-md: 14px;
+    --s-lg: 16px;
+    --s-xl: 24px;
+    --s-xxl: 32px;
+    --s-xxxl: 48px;
+    --s-block: 80px;
+    --s-section: 88px;
+    --s-band: 120px;
+
+    --maxw: 1200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--bodyfont);
+    background: var(--canvas-dark);
+    color: var(--on-dark);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--primary); color: #fff; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s-xl); }
+
+  /* ---------- Display type ---------- */
+  .display {
+    font-family: var(--display);
+    font-weight: 500;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+  }
+  .heading {
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -0.32px;
+  }
+
+  /* ---------- Bands ---------- */
+  .band { padding: var(--s-section) 0; }
+  .band-dark { background: var(--canvas-dark); color: var(--on-dark); }
+  .band-light { background: var(--canvas-light); color: var(--ink); }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    height: 64px; display: flex; align-items: center;
+    background: rgba(0,0,0,0.78);
+    backdrop-filter: saturate(140%) blur(12px);
+    border-bottom: 1px solid var(--hairline-dark);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .wordmark {
+    font-family: var(--display); font-weight: 600; font-size: 20px;
+    letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px;
+    white-space: nowrap;
+  }
+  .nav .wordmark { font-size: 17px; }
+  @media (min-width: 480px) { .nav .wordmark { font-size: 20px; } }
+  .wordmark .glyph {
+    width: 22px; height: 22px; border-radius: 6px;
+    background: var(--primary); display: inline-block;
+  }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 14px; font-weight: 600; letter-spacing: 0.16px;
+    color: var(--on-dark-mute); transition: color .18s ease;
+  }
+  .nav-links a:hover { color: var(--on-dark); }
+  .nav-cta { display: flex; align-items: center; gap: 16px; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: var(--bodyfont); font-weight: 600; font-size: 16px; letter-spacing: 0.24px;
+    border-radius: var(--r-full); height: 48px; padding: 0 28px;
+    border: 1px solid transparent; cursor: pointer; transition: all .18s ease;
+    white-space: nowrap;
+  }
+  .btn:focus-visible { outline: 3px solid var(--primary-bright); outline-offset: 2px; }
+  .btn-primary { background: var(--canvas-light); color: var(--canvas-dark); }
+  .btn-primary:hover { background: var(--faint); }
+  .btn-dark { background: var(--canvas-dark); color: var(--on-dark); }
+  .btn-dark:hover { background: var(--surface-elevated); }
+  .btn-soft { background: var(--surface-soft); color: var(--ink); }
+  .btn-soft:hover { background: var(--hairline-light); }
+  .btn-outline-dark { background: transparent; color: var(--on-dark); border-color: var(--on-dark); padding: 0 27px; }
+  .btn-outline-dark:hover { background: rgba(255,255,255,0.08); }
+  .btn-outline-light { background: var(--canvas-light); color: var(--ink); border-color: var(--hairline-strong); padding: 0 27px; }
+  .btn-outline-light:hover { background: var(--surface-soft); }
+  .btn-sm { height: 36px; font-size: 14px; padding: 0 16px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: var(--s-band) 0 var(--s-block); }
+  .hero .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; letter-spacing: 0.04em; color: var(--on-dark-mute);
+    border: 1px solid var(--hairline-dark); border-radius: var(--r-full);
+    padding: 6px 14px; margin-bottom: 28px;
+  }
+  .hero .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-teal); }
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 116px);
+    margin-bottom: 28px; max-width: 14ch;
+  }
+  .hero h1 .accent { color: var(--primary-bright); }
+  .hero .lede {
+    font-size: clamp(17px, 2.2vw, 20px); line-height: 1.56; color: var(--on-dark-mute);
+    max-width: 60ch; margin-bottom: 36px; font-weight: 400;
+  }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* meta strip */
+  .meta-strip {
+    display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 56px;
+    padding-top: 36px; border-top: 1px solid var(--hairline-dark);
+  }
+  .meta-strip .item { display: flex; flex-direction: column; gap: 4px; }
+  .meta-strip .k { font-size: 13px; color: var(--stone); letter-spacing: 0.02em; }
+  .meta-strip .v { font-family: var(--display); font-weight: 500; font-size: 22px; }
+
+  /* ---------- Section heads ---------- */
+  .sec-head { margin-bottom: 48px; }
+  .sec-eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--primary); margin-bottom: 16px; display: block;
+  }
+  .band-dark .sec-eyebrow { color: var(--primary-bright); }
+  .sec-title { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 18ch; }
+  .sec-sub { font-size: 18px; line-height: 1.56; color: var(--mute); max-width: 56ch; margin-top: 16px; }
+  .band-dark .sec-sub { color: var(--on-dark-mute); }
+
+  /* ---------- Stack / skills ---------- */
+  .stack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stack-card {
+    background: var(--surface-elevated); border-radius: var(--r-lg); padding: 32px;
+    border: 1px solid var(--hairline-dark);
+  }
+  .stack-card.featured { background: var(--primary); border-color: transparent; }
+  .stack-card .label {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--stone); margin-bottom: 18px;
+  }
+  .stack-card.featured .label { color: rgba(255,255,255,0.78); }
+  .stack-card h3 { font-family: var(--display); font-weight: 500; font-size: 22px; margin-bottom: 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 13px; font-weight: 500; padding: 6px 13px; border-radius: var(--r-full);
+    background: rgba(255,255,255,0.06); color: var(--on-dark); border: 1px solid var(--hairline-dark);
+  }
+  .stack-card.featured .chip { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.22); }
+
+  /* ---------- Projects ---------- */
+  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .proj-card {
+    background: var(--surface-card); border: 1px solid var(--hairline-light);
+    border-radius: var(--r-lg); padding: 32px; color: var(--ink);
+    display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .proj-card:hover { transform: translateY(-4px); }
+  .proj-card .tag {
+    align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+    background: var(--surface-soft); color: var(--charcoal); padding: 5px 12px;
+    border-radius: var(--r-full); margin-bottom: 20px;
+  }
+  .proj-card h3 { font-family: var(--display); font-weight: 500; font-size: 24px; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .proj-card p { font-size: 15px; line-height: 1.55; color: var(--mute); margin-bottom: 22px; }
+  .proj-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .proj-card li { font-size: 14px; line-height: 1.5; color: var(--body); padding-left: 22px; position: relative; }
+  .proj-card li::before {
+    content: ""; position: absolute; left: 0; top: 7px; width: 8px; height: 8px;
+    border-radius: 3px; background: var(--primary);
+  }
+  .proj-card .foot { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; }
+  .proj-card .ministack {
+    font-size: 12px; color: var(--ash); background: var(--surface-soft);
+    padding: 4px 10px; border-radius: var(--r-sm);
+  }
+
+  /* ---------- Experience timeline ---------- */
+  .xp { display: flex; flex-direction: column; }
+  .xp-row {
+    display: grid; grid-template-columns: 200px 1fr; gap: 32px;
+    padding: 32px 0; border-top: 1px solid var(--hairline-dark);
+  }
+  .xp-row:last-child { border-bottom: 1px solid var(--hairline-dark); }
+  .xp-when { color: var(--stone); font-size: 14px; line-height: 1.5; }
+  .xp-when .yr { font-family: var(--display); font-weight: 500; font-size: 18px; color: var(--on-dark); display: block; margin-bottom: 4px; }
+  .xp-what h3 { font-family: var(--display); font-weight: 500; font-size: 22px; margin-bottom: 4px; }
+  .xp-what .co { color: var(--primary-bright); font-weight: 600; font-size: 15px; margin-bottom: 14px; display: inline-block; }
+  .xp-what p { color: var(--on-dark-mute); font-size: 15px; line-height: 1.6; max-width: 64ch; }
+  .xp-what .badge {
+    display: inline-block; font-size: 12px; color: var(--accent-teal);
+    border: 1px solid rgba(0,168,126,0.4); border-radius: var(--r-full);
+    padding: 3px 10px; margin-top: 12px;
+  }
+
+  /* ---------- Bootcamp progress ---------- */
+  .edu-card {
+    background: var(--surface-elevated); border: 1px solid var(--hairline-dark);
+    border-radius: var(--r-lg); padding: 40px;
+  }
+  .edu-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
+  .edu-top h3 { font-family: var(--display); font-weight: 500; font-size: 28px; }
+  .edu-top .sub { color: var(--on-dark-mute); font-size: 15px; margin-top: 6px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 14px; color: var(--on-dark-mute); margin-bottom: 10px; }
+  .progress-track { height: 10px; background: rgba(255,255,255,0.08); border-radius: var(--r-full); overflow: hidden; }
+  .progress-fill { height: 100%; width: 50%; background: var(--primary); border-radius: var(--r-full); }
+  .modules { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .module { font-size: 13px; padding: 6px 13px; border-radius: var(--r-full); background: rgba(255,255,255,0.06); border: 1px solid var(--hairline-dark); color: var(--on-dark-mute); }
+
+  /* ---------- Contact ---------- */
+  .contact { text-align: center; }
+  .contact h2 { font-size: clamp(40px, 7vw, 80px); margin-bottom: 24px; }
+  .contact p { font-size: 18px; color: var(--on-dark-mute); max-width: 48ch; margin: 0 auto 36px; line-height: 1.56; }
+  .contact-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---------- Footer ---------- */
+  .footer { background: var(--canvas-dark); padding: var(--s-block) 0 48px; border-top: 1px solid var(--hairline-dark); }
+  .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 56px; }
+  .footer .wordmark { margin-bottom: 16px; }
+  .footer .tag { color: var(--on-dark-mute); font-size: 14px; max-width: 32ch; line-height: 1.5; }
+  .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); margin-bottom: 16px; }
+  .footer-col a { display: block; color: var(--on-dark-mute); font-size: 15px; margin-bottom: 12px; transition: color .18s ease; }
+  .footer-col a:hover { color: var(--on-dark); }
+  .footer-base { padding-top: 32px; border-top: 1px solid var(--divider-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-base p { font-size: 13px; color: var(--ash); }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1023px) {
+    .proj-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 767px) {
+    .band { padding: 64px 0; }
+    .hero { padding: 72px 0 56px; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .xp-row { grid-template-columns: 1fr; gap: 12px; }
+    .meta-strip { gap: 20px 32px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+    .proj-card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap">
+      <a class="wordmark" href="#top"><span class="glyph"></span>Poppy Puspa Sari</a>
+      <div class="nav-links">
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#bootcamp">Bootcamp</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="band-dark hero">
+    <div class="wrap reveal">
+      <span class="eyebrow"><span class="dot"></span>Open to remote · Open to relocate</span>
+      <h1 class="display">Fullstack engineer, now shipping <span class="accent">on-chain</span>.</h1>
+      <p class="lede">Eight-plus years building production web apps in JavaScript, TypeScript, React and Node — now writing Solidity, testing in Foundry, and shipping upgradeable contracts and full-stack dApps. I think in systems architecture and business logic at the same time.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-outline-dark" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="meta-strip">
+        <div class="item"><span class="k">Experience</span><span class="v">8+ years</span></div>
+        <div class="item"><span class="k">Focus</span><span class="v">Solidity · Foundry</span></div>
+        <div class="item"><span class="k">Deployed on</span><span class="v">Sepolia</span></div>
+        <div class="item"><span class="k">Bootcamp</span><span class="v">8/16 modules</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- STACK -->
+  <section id="stack" class="band band-dark">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-eyebrow">The toolkit</span>
+        <h2 class="sec-title heading">A frontend-deep engineer learning to write the contracts underneath.</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card featured reveal">
+          <div class="label">Blockchain / Web3</div>
+          <h3>Where I'm heading</h3>
+          <div class="chips">
+            <span class="chip">Solidity</span><span class="chip">Foundry</span><span class="chip">viem</span>
+            <span class="chip">wagmi</span><span class="chip">RainbowKit</span><span class="chip">ethers.js</span>
+            <span class="chip">ERC-20</span><span class="chip">ERC-721</span><span class="chip">ERC-1155</span>
+            <span class="chip">UUPS proxy</span><span class="chip">OpenZeppelin</span><span class="chip">Governor + Timelock</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="label">Frontend</div>
+          <h3>Where I'm strongest</h3>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">React Native</span>
+            <span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">Redux</span>
+            <span class="chip">Storybook</span><span class="chip">Styled-components</span><span class="chip">Flutter</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="label">Backend</div>
+          <h3>Server-side</h3>
+          <div class="chips">
+            <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API design</span>
+            <span class="chip">PostgreSQL</span><span class="chip">MongoDB</span>
+          </div>
+        </div>
+        <div class="stack-card reveal">
+          <div class="label">Infrastructure & tools</div>
+          <h3>Shipping it</h3>
+          <div class="chips">
+            <span class="chip">Azure Serverless</span><span class="chip">Azure Frontdoor</span><span class="chip">CI/CD</span>
+            <span class="chip">Git</span><span class="chip">Contentful CMS</span><span class="chip">Docker</span><span class="chip">Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="band band-light">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-eyebrow">Selected work</span>
+        <h2 class="sec-title heading">Contracts deployed and verified on Sepolia.</h2>
+        <p class="sec-sub">Three projects from the Metana bootcamp, built end-to-end — from storage layout to a connected frontend.</p>
+      </div>
+      <div class="proj-grid">
+
+        <article class="proj-card reveal">
+          <span class="tag">ERC-1155 · UUPS</span>
+          <h3>UdraForge</h3>
+          <p>An upgradeable ERC-1155 game economy with a dynamic crafting system and probabilistic difficulty tiers.</p>
+          <ul>
+            <li>Four roles: admin, pauser, upgrader, game admin</li>
+            <li>V1→V2 upgrade adding batch purchasing and per-recipe difficulty, storage layout validated by the OpenZeppelin plugin</li>
+            <li>ReentrancyGuardTransient (EIP-1153), CEI pattern, gas-efficient custom errors</li>
+            <li>Unit, fuzz (×256 runs) and invariant tests with custom handlers</li>
+          </ul>
+          <div class="foot">
+            <span class="ministack">Solidity</span><span class="ministack">Foundry</span><span class="ministack">OpenZeppelin</span>
+          </div>
+        </article>
+
+        <article class="proj-card reveal">
+          <span class="tag">Governance · DAO</span>
+          <h3>UdraDAO</h3>
+          <p>Participation-based governance built on a non-transferable ERC20Votes token, with a live on-chain proposal.</p>
+          <ul>
+            <li>UPT governance token with auto-self-delegation, bitmap per-epoch claim tracking and per-epoch mint caps</li>
+            <li>Full OZ Governor + TimelockController stack with quorum and a timelock-owned treasury</li>
+            <li>Snapshot off-chain voting wired to on-chain execution — executed a live proposal on Sepolia</li>
+            <li>Invariant tests (128k random calls) proving supply and balance hold across all transitions</li>
+          </ul>
+          <div class="foot">
+            <span class="ministack">Governor</span><span class="ministack">Timelock</span><span class="ministack">Snapshot</span>
+          </div>
+        </article>
+
+        <article class="proj-card reveal">
+          <span class="tag">Full-stack dApp</span>
+          <h3>UdraToken Sale</h3>
+          <p>A capped ERC-20 token with a buy/sell marketplace and a connected, responsive frontend.</p>
+          <ul>
+            <li>Reserve-first minting logic with two-step ownership transfer</li>
+            <li>Frontend in Next.js 16, Tailwind CSS 4, wagmi v3, viem and RainbowKit</li>
+            <li>Real-time balances, transaction feedback and a responsive dark theme</li>
+          </ul>
+          <div class="foot">
+            <span class="ministack">Next.js</span><span class="ministack">wagmi</span><span class="ministack">viem</span><span class="ministack">RainbowKit</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="band band-dark">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-eyebrow">Track record</span>
+        <h2 class="sec-title heading">Eight years shipping in remote, cross-functional teams.</h2>
+      </div>
+      <div class="xp">
+
+        <div class="xp-row reveal">
+          <div class="xp-when"><span class="yr">'21 — '24</span>Remote · Melbourne / US</div>
+          <div class="xp-what">
+            <h3>Senior Software Engineer</h3>
+            <span class="co">R/GA</span>
+            <p>Led frontend architecture for six interconnected web properties on the AACo platform — producing technical solution documents and infrastructure plans. Built a shared UI kit with snapshot testing, shipped with Next.js, Tailwind and Storybook, and integrated Contentful, Azure serverless and Frontdoor CDN. Mentored engineers and worked with designers and PMs to scope and deliver features.</p>
+            <span class="badge">Promoted to Senior in 2024</span>
+          </div>
+        </div>
+
+        <div class="xp-row reveal">
+          <div class="xp-when"><span class="yr">'19 — '21</span>Jakarta, Indonesia</div>
+          <div class="xp-what">
+            <h3>Software Development Engineer</h3>
+            <span class="co">EKRUT</span>
+            <p>Led frontend development of a management system with React, TypeScript, Redux, Formik and Ant Design. Documented a component library with Styleguidist for team-wide adoption, and built mobile features in React Native for the Talent team.</p>
+          </div>
+        </div>
+
+        <div class="xp-row reveal">
+          <div class="xp-when"><span class="yr">'18 — '19</span>Jakarta, Indonesia</div>
+          <div class="xp-what">
+            <h3>Lead Frontend Engineer</h3>
+            <span class="co">Volantis</span>
+            <p>Built e-commerce and B2B platforms in Next.js with a feature-based architecture and a shared UI kit on a three-person team. Developed desktop apps with Electron-React and data visualizations with D3.js.</p>
+            <span class="badge">Promoted from Senior Fullstack to Lead</span>
+          </div>
+        </div>
+
+        <div class="xp-row reveal">
+          <div class="xp-when"><span class="yr">'16 — '18</span>Jakarta, Indonesia</div>
+          <div class="xp-what">
+            <h3>Earlier roles</h3>
+            <span class="co">Tokopedia · Purwadhika · Kapanlagi</span>
+            <p>Engineer at Tokopedia (Perl, Go, PostgreSQL), part-time instructor teaching Node, Express, MongoDB and React, and full-stack work across earlier product teams. Two-time hackathon runner-up — Facebook Developer Circle (2017) and AAJI (2018).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOTCAMP -->
+  <section id="bootcamp" class="band band-dark">
+    <div class="wrap">
+      <div class="edu-card reveal">
+        <div class="edu-top">
+          <div>
+            <h3>Solidity Bootcamp — Metana</h3>
+            <p class="sub">Intensive smart-contract development, security and full-stack dApp engineering with Solidity and Foundry.</p>
+          </div>
+          <a class="btn btn-outline-dark btn-sm" href="#contact">In progress</a>
+        </div>
+        <div class="progress-label"><span>Modules completed</span><span>8 / 16</span></div>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+        <div class="modules">
+          <span class="module">ERC-20</span><span class="module">ERC-721</span><span class="module">ERC-1155</span>
+          <span class="module">UUPS upgradeable proxies</span><span class="module">DAO governance</span>
+          <span class="module">Governor + Timelock</span><span class="module">Snapshot</span><span class="module">Token vesting</span>
+          <span class="module">Deterministic escrow (CREATE2)</span><span class="module">Security auditing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="band band-dark contact">
+    <div class="wrap reveal">
+      <h2 class="display">Let's build something on-chain.</h2>
+      <p>I'm open to remote fullstack and Solidity roles, and open to relocate. The fastest way to reach me is email.</p>
+      <div class="contact-cta">
+        <a class="btn btn-primary" href="mailto:poppy.puspasari@yahoo.co.id">poppy.puspasari@yahoo.co.id</a>
+        <a class="btn btn-outline-dark" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline-dark" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="wordmark"><span class="glyph"></span>Poppy Puspa Sari</div>
+          <p class="tag">Fullstack Solidity Product Engineer. Frontend-deep, learning the contracts underneath.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a href="#stack">Stack</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#bootcamp">Bootcamp</a>
+          </div>
+          <div class="footer-col">
+            <h4>Elsewhere</h4>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:poppy.puspasari@yahoo.co.id">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Poppy Puspa Sari. Built with the Revolut design language.</p>
+        <p>Open to remote · Open to relocate</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('in'), Math.min(i * 60, 240));
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => io.observe(el));
+    } else {
+      els.forEach(el => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>
