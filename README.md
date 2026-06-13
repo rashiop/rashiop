@@ -7,15 +7,15 @@ I fell down the blockchain rabbit hole and never came back out. Currently buildi
 
 ### 🔗 Featured Projects
 
-**[UdraForge](https://github.com/rashiop/udra-forge)** — Upgradeable ERC-1155 Game Economy  
+**[UdraForge](https://github.com/rashiop/udraForge)** — Upgradeable ERC-1155 Game Economy  
 UUPS proxy · 4-role access control · recipe-based crafting with difficulty tiers · V1→V2 upgrade  
 `Solidity` `Foundry` `OpenZeppelin` `109 tests`
 
-**[UdraDAO](https://github.com/rashiop/udra-dao)** — Participation-Based Governance  
+**[UdraDAO](https://github.com/rashiop/udraDao)** — Participation-Based Governance  
 Non-transferable ERC20Votes · bitmap epoch tracking · Governor + Timelock · Snapshot integration  
 `Solidity` `Foundry` `OpenZeppelin` `144 tests`
 
-**[Udra Token Sale](https://github.com/rashiop/udra-token-sale)** — Full-Stack dApp  
+**[Udra Token Sale](https://github.com/rashiop/udraTokenSale)** — Full-Stack dApp  
 Capped ERC-20 · reserve-first minting · buy/sell marketplace · real-time frontend  
 `Solidity` `Next.js` `wagmi` `viem` `RainbowKit` `51 tests`
 
