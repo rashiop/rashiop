@@ -1,24 +1,42 @@
-Heyy there,<br/>
-You can call me Pops, a tech enthusiast and cat lover
-- ❤ Learn, Cats & Dogs, Coffee
-- 🌱 I’m currently learning embedded system (arduino uno r3/ ESP32/ PIC) and architecting system
-- 📚 Learning and re-learn to plan tree 🌲
-- 💬 Ask me about react, go, and rust
+# Hey, I'm Pops 👋
 
-<h3 align="left">Let's connect!</h3>
-<p align="left">
-    <a href="https://linkedin.com/in/ppsari" target="blank">
-        <img
-             align="center"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr6XEJreNg-qwIhidx4LuW-aJvO0gbtOQTALWAQFnwmhTKD57x_1KYSDby&s=10"
-             alt="linkedin"
-             height="30"
-             width="40"
-         />
-    </a>
-</p>
+**Fullstack Web3 Engineer** — 8+ years of React/TypeScript/Node.js, now building smart contracts with Solidity & Foundry.
+I fell down the blockchain rabbit hole and never came back out. Currently building on-chain systems that are well-tested, upgradeable, and fun to use.
 
-<h3 align="left">Languages and Tools:</h3>
+---
+
+### 🔗 Featured Projects
+
+**[UdraForge](https://github.com/rashiop/udra-forge)** — Upgradeable ERC-1155 Game Economy  
+UUPS proxy · 4-role access control · recipe-based crafting with difficulty tiers · V1→V2 upgrade  
+`Solidity` `Foundry` `OpenZeppelin` `109 tests`
+
+**[UdraDAO](https://github.com/rashiop/udra-dao)** — Participation-Based Governance  
+Non-transferable ERC20Votes · bitmap epoch tracking · Governor + Timelock · Snapshot integration  
+`Solidity` `Foundry` `OpenZeppelin` `144 tests`
+
+**[Udra Token Sale](https://github.com/rashiop/udra-token-sale)** — Full-Stack dApp  
+Capped ERC-20 · reserve-first minting · buy/sell marketplace · real-time frontend  
+`Solidity` `Next.js` `wagmi` `viem` `RainbowKit` `51 tests`
+
+---
+
+### 🛠 Tech Stack
+
+**Frontend:** React · Next.js · TypeScript · Tailwind CSS · Redux · Storybook  
+**Backend:** Node.js · Express · PostgreSQL · MongoDB  
+**Blockchain:** Solidity · Foundry · viem · wagmi · RainbowKit · ethers.js · OpenZeppelin  
+**Standards:** ERC-20 · ERC-721 · ERC-1155 · UUPS · Governor + Timelock  
+
+---
+
+### 📬 Let's Connect
+
+I'm looking for remote fullstack Web3 roles. If you're building something interesting on-chain, let's talk.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ppsari-blue?style=flat&logo=linkedin)](https://linkedin.com/in/ppsari)
+
+<!-- <h3 align="left">Languages and Tools:</h3>
 <p align="left">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" width="40" height="40"/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"width="40" height="40" />
@@ -28,4 +46,4 @@ You can call me Pops, a tech enthusiast and cat lover
 <p>
     <img align="center" src="https://github-readme-stats.vercel.app/api?username=rashiop&show_icons=true&locale=en" alt="rashiop" />
     <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rashiop&" alt="rashiop" />
-</p>
+</p> -->
